@@ -1,10 +1,17 @@
 # Nexus
+
 Purpose:
 
     This is the master copy of all other flask applications and should not be altered.
-    This app is written using the Flask Framework, Python as the server side language, HTML, CSS, JS, Bootstrap on the front end, and sqlite as the database.
-    The general structure of this web application is modeled after the Flask "Blueprints".  This makes each section of the app
-    modular. 
+    This app is written using the Flask Framework, Python as the server side language,
+    HTML, CSS, JS, Bootstrap on the front end, and sqlite as the database.
+    The general structure of this web application is modeled after the Flask
+    "Blueprints".  This makes each section of the app modular. 
+
+How to run this file.
+
+    Inside of your venv, navigate to the project folder and
+         python run.py
 
 Project Tree:
 
