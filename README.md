@@ -1,4 +1,4 @@
-# Nexus
+# Flask Master Template
 
 Purpose:
 
