@@ -1,0 +1,19 @@
+<!-- This is the master template for all of the child html files -->
+{% extends "master_template.html" %}
+
+<!-- Insert the title for the page -->
+{% block title %}
+<title>Home</title>
+{% endblock title %}
+
+<!-- Insert the body of the document here -->
+{% block body %}
+<div class="container">
+    <div class="jumbotron-fluid">
+
+        <h1 class="red">This is the home page</h1>
+        <p>Insert the content of the homepage here <span>carrot</span></p>
+
+    </div>
+</div>
+{% endblock body %}
