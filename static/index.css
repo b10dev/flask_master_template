@@ -1,0 +1,455 @@
+/*------------Colors----------*/
+/*Text----------*/
+.primary {
+    color: #1AFE01;
+}
+.secondary {
+    color: #808080;
+}
+.accent {
+    color: #01FEDC;
+}
+.white {
+    color: #FEFEFE;
+}
+.black {
+    color: #010000;
+}
+.error {
+    color: #FE0101;
+}
+/*Backgrounds----------*/
+.bg-primary {
+    background-color: #1AFE01;
+}
+.bg-secondary {
+    background-color: #00fbff;
+}
+.bg-accent {
+    background-color: #01FEDC;
+}
+.bg-white {
+    background-color: #FEFEFE;
+}
+.bg-black {
+    background-color: #010000;
+}
+.bg-error {
+    background-color: #FE0101;
+}
+/*Quickref----------*/
+.tiffanyblue {
+    color: #0abab5;
+}
+.limegreen {
+    color: #32cd32;
+}
+.linuxgrey {
+    background-color: #434343;
+}
+/*----------Feedback Messages----------*/
+.success{
+    color: #02ab51 ;
+}
+.caution{
+    color: #a5ab02 ;
+}
+.error{
+    color: #ff2f00 ;
+}
+.success-border{
+    border: 2px solid #02ab51;
+}
+.caution-border{
+    border: 2px solid #a5ab02;
+}
+.error-border{
+    border: 2px solid #ff2f00;
+}
+.success-message{
+    color: #02ab51 ;
+    background-color: #8df7bf;
+    border: 2px solid #02ab51;
+}
+.caution-message{
+    color: #a5ab02 ;
+    background-color: #e0e386;
+    border: 2px solid #a5ab02;
+}
+.error-message{
+    color: #ff2f00 ;
+    background-color: #f78d8d;
+    border: 2px solid #ff2f00;
+}
+/*------------Containers----------*/
+/* BODY--------------------------------------------------------------------
+    The Main body of the document.*/
+.body{
+    margin: auto;
+    padding: auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* TOOLBAR------------------------------------------------------------------
+    The Toolbar stretches across the top of the
+    screen and by default displays links to both
+    the home and about me pages
+    Additional documentation is provided in 'toolbar_example.html'.*/
+.toolbar {
+    height: 30px;
+    /*Spacing for elements inside*/
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+    border: 3px solid lightgrey;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+}
+/*Image that will link to the homepage onclick*/
+.toolbar-logo {
+    height: 12px;
+    display: inline-block;
+    margin-right: 1%;
+    cursor: pointer;
+}
+.toolbar-heading {
+    display: inline-block;
+    font-size: 15px;
+}
+/*This menu icon has some functionality in JS.
+When a mouse hovers over the icon, the dropdown
+menu is displayed, and when the mouse leaves, the
+dropdown menu is hidden. See the index.js for details*/
+.toolbar-menu-icon {
+    height: 12px;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+    }
+.toolbar-dropdown{
+    display: none;
+    float: right;
+    margin-right: 10px;
+    text-align: left;
+    padding-right: 15px;
+    border: 3px solid lightgrey;
+    border-top: transparent;
+    border-right: transparent;
+}
+/* Basic------------------------------------------------------------------
+    The view container just adds a default margin
+    and padding to the content.*/
+.basic {
+    margin: 5%;
+    padding: 5%;
+}
+/* FORM VIEW--------------------------------------------------------------
+    The form view container adds margin, padding,
+    a border, box shadow and a basic heading and
+    input box inside of the form
+    Additional documentation is provided in 'form_view_example.html'.*/
+.form-field{
+    margin: 2%;
+    width: auto%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+}
+.form-field:focus{
+    width: 100%;
+    margin: 2%;
+    border-radius: 4px;
+    border: 2px solid grey;
+    border-top: transparent;
+    border-left: transparent;
+}
+#warning-text{
+    display: block;
+}
+/*----------Float----------*/
+.fright{
+    float: right;
+}
+.fleft{
+    float: left;
+}
+.fcenter{
+    float: center;
+}
+/*----------Display----------*/
+.inline{
+    display: inline;
+}
+.block{
+    display: block;
+}
+.none{
+    display: none;
+}
+/*----------Alignment----------*/
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.center{
+    text-align: center;
+}
+/*----------Boxshadow----------*/
+.boxshadowr{
+    box-shadow: 3px 3px 5px #141414;
+}
+.boxshadowl{
+    box-shadow: -3px 3px 5px #141414;
+}
+.boxshadowc{
+    box-shadow: 0px 3px 5px #141414;
+}
+/*----------Border----------*/
+.thinborder{
+    border: 2px solid grey;
+}
+.roundedcorners{
+    border-radius: 10px;
+}   
+.round{
+    border-radius: 50px;
+} 
+.reactive-border{
+    border: 2px solid grey;
+    border-top: transparent;
+    border-left: transparent;
+}
+
+/*----------Images----------*/
+.p16{
+    max-width:16px;
+    max-height:16px;
+}
+.p32{
+    max-width:32px;
+    max-height:32px;
+}
+.p64{
+    max-width:64px;
+    max-height:64px;
+}
+.p128{
+    max-width:128px;
+    max-height:128px;
+}
+.p256{
+    max-width:256px;
+    max-height:256px;
+}
+.p512{
+    max-width:512px;
+    max-height:512px;
+}
+.p720{
+    max-width:720px;
+    max-height:720px;
+}
+.pl720{
+    max-width:720px;
+    max-height:512px;
+}
+.pp512{
+    max-width:512px;
+    max-height:720px;
+}
+.pl1280{
+    max-width:1280px;
+    max-height:720px;
+}
+.pp720{
+    max-width:720px;
+    max-height:1280px;
+}
+/*----------Width----------*/
+.w10{
+    width:10%;
+}
+.w25{
+    width:25%;
+}
+.w50{
+    width:50%;
+}
+.w75{
+    width:75%;
+}
+.w100{
+    width:100%;
+}
+/*----------Height----------*/
+.h10{
+    height:10%;
+}
+.h25{
+    height:25%;
+}
+.h50{
+    height:50%;
+}
+.h75{
+    height:75%;
+}
+.h100{
+    height:100%;
+}
+/*----------Padding----------*/
+.p1{
+    padding:5%;
+}
+.p2{
+    padding:10%;
+}
+.p3{
+    padding:15%;
+}
+.p4{
+    padding:25%;
+}
+.p5{
+    padding:50%;
+}
+.pt1{
+    padding-top:5%;
+}
+.pt2{
+    padding-top:10%;
+}
+.pt3{
+    padding-top:15%;
+}
+.pt4{
+    padding-top:25%;
+}
+.pt5{
+    padding-top:50%;
+}
+.pr1{
+    padding-right:5%;
+}
+.pr2{
+    padding-right:10%;
+}
+.pr3{
+    padding-right:15%;
+}
+.pr4{
+    padding-right:25%;
+}
+.pr5{
+    padding-right:50%;
+}
+.pb1{
+    padding-bottom:5%;
+}
+.pb2{
+    padding-bottom:10%;
+}
+.pb3{
+    padding-bottom:15%;
+}
+.pb4{
+    padding-bottom:25%;
+}
+.pb5{
+    padding-bottom:50%;
+}
+.pl1{
+    padding-left:5%;
+}
+.pl2{
+    padding-left:10%;
+}
+.pl3{
+    padding-left:15%;
+}
+.pl4{
+    padding-left:25%;
+}
+.pl5{
+    padding-left:50%;
+}
+/*----------Margin----------*/
+.m1{
+    margin:5%;
+}
+.m2{
+    margin:10%;
+}
+.m3{
+    margin:15%;
+}
+.m4{
+    margin:25%;
+}
+.m5{
+    margin:50%;
+}
+.mt1{
+    margin-top:5%;
+}
+.mt2{
+    margin-top:10%;
+}
+.mt3{
+    margin-top:15%;
+}
+.mt4{
+    margin-top:25%;
+}
+.mt5{
+    margin-top:50%;
+}
+.mr1{
+    margin-right:5%;
+}
+.mr2{
+    margin-right:10%;
+}
+.mr3{
+    margin-right:15%;
+}
+.mr4{
+    margin-right:25%;
+}
+.mr5{
+    margin-right:50%;
+}
+.mb1{
+    margin-bottom:5%;
+}
+.mb2{
+    margin-bottom:10%;
+}
+.mb3{
+    margin-bottom:15%;
+}
+.mb4{
+    margin-bottom:25%;
+}
+.mb5{
+    margin-bottom:50%;
+}
+.ml1{
+    margin-left:5%;
+}
+.ml2{
+    margin-left:10%;
+}
+.ml3{
+    margin-left:15%;
+}
+.ml4{
+    margin-left:25%;
+}
+.ml5{
+    margin-left:50%;
+}
