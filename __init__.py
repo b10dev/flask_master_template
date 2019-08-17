@@ -9,6 +9,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-from nexus.home.routes import home
+from flask_master_template.home.routes import home
 
 app.register_blueprint(home)
