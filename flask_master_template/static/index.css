@@ -1,0 +1,963 @@
+/*
+Author: Jay
+Notes:  
+
+    This is the css file for the B10OnlineHtml system.
+This file is the master and should only be altered for
+development.  An uncommented version of this file will 
+be found for usage in other programs.
+
+    Organization is important, and to that end, the
+categories for styling information have been placed in
+parent and child 'tabs'.
+____________________________________________
+|       PARENT TAB                          \
+|                                            \__________________________________________________________________________________________________________________________________________ 
+The parent tabs run the full length of the screen and 
+are in alphabetical order.  
+Child tabs Do not run the length, but correspond to the
+parent tab.  In some cases a description or associated
+file of examples will be listed below the child tab label.
+__________________
+|    Child Tab    \_____________________________
+|  Description of associated file, if any.
+
+An index of the tabs can be found below.
+
+Associated files:
+    base_template.html
+    blog_example.html
+    form_view_example.html
+    index.html
+    toolbar_example.html
+
+Index: 
+
+- Colors
+    Backgrounds
+    Feedback messages
+    Quickref
+    Text 
+
+- Containers
+    Basic
+    Body
+    Feed
+    Form
+    Toolbar
+
+- Elements
+    Buttons
+    Feedback Messages
+    Images       
+
+- Media Queries
+
+- Placement
+    Alignment
+    Display
+    Float
+    Margin
+    Padding
+
+- Style
+    Border
+    Boxshadow
+    Feedback Messages
+    Fonts
+    Height
+    Width                
+
+*/
+
+
+/*
+____________________________________________
+|       COLORS                               \
+|                                             \__________________________________________________________________________________________________________________________________________
+*/
+
+
+/*
+___________________
+|    Backgronds    \________________________________
+*/
+
+
+.bg-primary {
+    background-color: #1AFE01;
+}
+.bg-secondary {
+    background-color: #00fbff;
+}
+.bg-accent {
+    background-color: #01FEDC;
+}
+.bg-white {
+    background-color: #FEFEFE;
+}
+.bg-black {
+    background-color: #010000;
+}
+.bg-error {
+    background-color: #FE0101;
+}
+
+
+/*
+__________________________
+|    Feedback Messages    \________________________
+*/
+
+
+.success{
+    color: #02ab51 ;
+}
+.caution{
+    color: #a5ab02 ;
+}
+.error{
+    color: #ff2f00 ;
+}
+
+
+/*
+_________________
+|    Quickref    \_______________________________
+*/
+
+
+.tiffanyblue {
+    color: #0abab5;
+}
+.limegreen {
+    color: #32cd32;
+}
+.linuxgrey {
+    background-color: #434343;
+}
+
+
+/*
+_____________
+|    Text    \____________________________________
+*/
+
+
+.primary {
+    color: #1AFE01;
+}
+.secondary {
+    color: #808080;
+}
+.accent {
+    color: #01FEDC;
+}
+.white {
+    color: #FEFEFE;
+}
+.black {
+    color: #010000;
+}
+.error {
+    color: #FE0101;
+}
+
+
+/*
+____________________________________________
+|       CONTAINERS                           \
+|                                             \__________________________________________________________________________________________________________________________________________
+|  Many example html files are enclosed for usage and reference.
+*/
+
+
+/*
+______________
+|    Basic    \__________________________________
+*/
+
+
+.basic {
+    margin: 5%;
+    padding: 5%;
+}
+
+
+/*
+____________
+|    Body   \____________________________________
+*/
+
+
+.body{
+    height: 100%;
+    margin: auto;
+    padding: auto;
+}
+
+
+/*
+_____________
+|    Feed    \__________________________________
+|  Example can be found in 'blog_example.html'
+*/
+
+
+.fullfeed {
+    margin: auto;
+    width: 100%;
+    padding: 5px;
+}    
+.leftfeed {
+    float: left;
+    margin-left: 0%;
+    width: 26%;
+    padding: 5px;
+}
+.rightfeed {
+    float: right;
+    
+    width: 26%;
+    padding: 5px;
+}
+.lefthalffeed {
+    float: left;
+    margin-left: 0%;
+    width: 49%;
+    padding: 5px;
+}
+.righthalffeed {
+    float: right;
+    width: 49%;
+    padding: 5px;
+}
+.feedimage {
+}
+.feedlabel {
+    font-size: 30px;
+    padding-left: 10px;
+}  
+.feedleft {
+    width: auto;
+    padding: 20px;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 50%;
+}
+.feedright {
+    width: auto;
+    padding: 20px;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 50%;
+    margin-right: 5%;
+}
+.feedcenter {
+    width: auto;
+    padding: 10px;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.feedbody{
+    font-size: 12px;
+    max-width: auto; 
+}
+.feedborder{
+    box-shadow: 3px 3px 5px #141414; 
+}
+@media (max-width: 360px){
+   .feedleft{
+        width: auto;
+        padding: 10px;
+        text-align: left;
+        margin-top: 20px;
+        margin-left: 15%;
+        margin-right: 15%;
+        } 
+    .feedright{
+        background-color: red;
+        width: auto;
+        padding: 10px;
+        text-align: left;
+        margin-top: 20px;
+        margin-left: 15%;
+        margin-right: 15%;
+        }    
+}
+
+
+/*
+_______________
+|    Form      \_____________________________________
+|  Example can be found in 'form_view_example.html'
+*/
+
+
+.form-field{
+    margin: 2%;
+    width: auto%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+
+}
+/* Example of reshaping elements with focus
+.form-field:focus{
+    width: 50%;
+    margin: 2%;
+    border-radius: 4px;
+    border: 2px solid grey;
+    border-top: transparent;
+    border-left: transparent;
+}
+*/
+
+
+/*
+__________________
+|    Slideshow    \__________________________________
+|  Example can be found in 'slideshow_example.html'
+*/
+
+
+.fullslideshow {
+  max-width: 1900px;
+  max-height: 800px;
+  position: relative;
+  margin: auto;
+}
+.mySlides {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/*
+_______________
+|    Toolbar   \____________________________________
+|  Example can be found in 'toolbar_example.html'
+*/
+
+
+.toolbar {
+    height: 50px;
+    /*Spacing for elements inside*/
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    text-align: left;
+    border: 1px solid lightgrey;
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+}
+/*Image that will link to the homepage onclick*/
+.toolbar-logo {
+    height: 25px;
+    display: inline-block;
+    margin-right: 1%;
+    cursor: pointer;
+}
+.toolbar-heading {
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 1px;
+}
+/*This menu icon has some functionality in JS.
+When a mouse hovers over the icon, the dropdown
+menu is displayed, and when the mouse leaves, the
+dropdown menu is hidden. See the index.js for details*/
+.toolbar-menu-icon {
+    height: 25px;
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+    cursor: pointer;
+    }
+.toolbar-dropdown{
+    display: none;
+    float: right;
+    margin-right: 10px;
+    text-align: left;
+    padding-right: 15px;
+    border: 1px solid lightgrey;
+    border-top: transparent;
+    border-right: transparent;
+}
+
+
+/*
+_____________________________________________
+|       ELEMENTS                             \
+|                                             \__________________________________________________________________________________________________________________________________________
+*/
+
+
+#warning-text{
+    display: block;
+}
+
+
+/*
+________________
+|    Buttons    \_______________________________________
+*/
+
+
+.btnsmall {
+       
+}
+
+
+/*
+__________________________
+|    Feedback Messages    \_____________________________
+*/
+
+
+.success-message{
+    color: #02ab51 ;
+    background-color: #8df7bf;
+    border: 2px solid #02ab51;
+}
+.caution-message{
+    color: #a5ab02 ;
+    background-color: #e0e386;
+    border: 2px solid #a5ab02;
+}
+.error-message{
+    color: #ff2f00 ;
+    background-color: #f78d8d;
+    border: 2px solid #ff2f00;
+}
+
+
+/*
+________________
+|    Images     \______________________________________
+*/
+
+
+.p16{
+    max-width:16px;
+    max-height:16px;
+}
+.p32{
+    max-width:32px;
+    max-height:32px;
+}
+.p64{
+    max-width:64px;
+    max-height:64px;
+}
+.p128{
+    max-width:128px;
+    max-height:128px;
+}
+.p256{
+    max-width:256px;
+    max-height:256px;
+}
+.p512{
+    max-width:512px;
+    max-height:512px;
+}
+.p720{
+    max-width:720px;
+    max-height:720px;
+}
+.pl720{
+    max-width:720px;
+    max-height:512px;
+}
+.pp512{
+    max-width:512px;
+    max-height:720px;
+}
+.pl1280{
+    max-width:1280px;
+    max-height:720px;
+}
+.pp720{
+    max-width:720px;
+    max-height:1280px;
+}
+
+
+/*
+____________________________________________
+|       MEDIA QUERYS                         \
+|                                             \__________________________________________________________________________________________________________________________________________
+MEDIA QUERIES NEED TO GO BELOW THE STYLES THEY ARE INTENDED TO 
+OVERWRITE!
+
+@media (max-width: 360px){
+   
+} 
+@media (max-width: 480px){
+   
+} 
+@media (max-width: 600px){
+   
+} 
+@media (max-width: 768px){
+   
+} 
+@media (max-width: 900px){
+   
+} 
+@media (max-width: 1024px){
+
+}
+*/
+
+
+/*
+_____________________________________________
+|       PLACEMENT                            \
+|                                             \__________________________________________________________________________________________________________________________________________
+*/
+
+
+/*
+_________________
+|    Alignment   \___________________________________
+*/
+
+
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}
+.center{
+    text-align: center;
+}
+
+
+/*
+________________
+|    Display    \___________________________________
+*/
+
+
+.inline{
+    display: inline;
+}
+.block{
+    display: block;
+}
+.none{
+    display: none;
+}
+
+
+/*
+______________
+|    Float    \____________________________________
+*/
+
+
+.fright{
+    float: right;
+}
+.fleft{
+    float: left;
+}
+.fcenter{
+    float: center;
+}
+
+
+/*
+______________
+|    Margin   \____________________________________
+*/
+
+
+.m1{
+    margin:5%;
+}
+.m2{
+    margin:10%;
+}
+.m3{
+    margin:15%;
+}
+.m4{
+    margin:25%;
+}
+.m5{
+    margin:50%;
+}
+.mt1{
+    margin-top:5%;
+}
+.mt2{
+    margin-top:10%;
+}
+.mt3{
+    margin-top:15%;
+}
+.mt4{
+    margin-top:25%;
+}
+.mt5{
+    margin-top:50%;
+}
+.mr1{
+    margin-right:5%;
+}
+.mr2{
+    margin-right:10%;
+}
+.mr3{
+    margin-right:15%;
+}
+.mr4{
+    margin-right:25%;
+}
+.mr5{
+    margin-right:50%;
+}
+.mb1{
+    margin-bottom:5%;
+}
+.mb2{
+    margin-bottom:10%;
+}
+.mb3{
+    margin-bottom:15%;
+}
+.mb4{
+    margin-bottom:25%;
+}
+.mb5{
+    margin-bottom:50%;
+}
+.ml1{
+    margin-left:5%;
+}
+.ml2{
+    margin-left:10%;
+}
+.ml3{
+    margin-left:15%;
+}
+.ml4{
+    margin-left:25%;
+}
+.ml5{
+    margin-left:50%;
+}
+
+
+/*
+________________
+|    Padding    \__________________________________
+*/
+
+
+.p1{
+    padding:5%;
+}
+.p2{
+    padding:10%;
+}
+.p3{
+    padding:15%;
+}
+.p4{
+    padding:25%;
+}
+.p5{
+    padding:50%;
+}
+.pt1{
+    padding-top:5%;
+}
+.pt2{
+    padding-top:10%;
+}
+.pt3{
+    padding-top:15%;
+}
+.pt4{
+    padding-top:25%;
+}
+.pt5{
+    padding-top:50%;
+}
+.pr1{
+    padding-right:5%;
+}
+.pr2{
+    padding-right:10%;
+}
+.pr3{
+    padding-right:15%;
+}
+.pr4{
+    padding-right:25%;
+}
+.pr5{
+    padding-right:50%;
+}
+.pb1{
+    padding-bottom:5%;
+}
+.pb2{
+    padding-bottom:10%;
+}
+.pb3{
+    padding-bottom:15%;
+}
+.pb4{
+    padding-bottom:25%;
+}
+.pb5{
+    padding-bottom:50%;
+}
+.pl1{
+    padding-left:5%;
+}
+.pl2{
+    padding-left:10%;
+}
+.pl3{
+    padding-left:15%;
+}
+.pl4{
+    padding-left:25%;
+}
+.pl5{
+    padding-left:50%;
+}
+
+
+/*
+____________________________________________
+|       STYLE                               \
+|                                            \__________________________________________________________________________________________________________________________________________
+*/
+
+
+/*
+__________________
+|    Border       \_____________________________
+*/
+
+
+.thinborder{
+    border: 2px solid grey;
+}
+.roundedcorners{
+    border-radius: 10px;
+}   
+.round{
+    border-radius: 50px;
+} 
+.reactive-border{
+    border: 2px solid grey;
+    border-top: transparent;
+    border-left: transparent;
+}
+
+
+/*
+__________________
+|    Boxshadow    \_____________________________
+*/
+
+
+.boxshadowr{
+    box-shadow: 3px 3px 5px #141414;
+}
+.boxshadowl{
+    box-shadow: -3px 3px 5px #141414;
+}
+.boxshadowc{
+    box-shadow: 0px 3px 5px #141414;
+}
+
+
+/*
+__________________________
+|    Feedback Messages    \_____________________
+*/
+
+
+.success-border{
+    border: 2px solid #02ab51;
+}
+.caution-border{
+    border: 2px solid #a5ab02;
+}
+.error-border{
+    border: 2px solid #ff2f00;
+}
+
+
+/*
+______________
+|    Fonts    \_____________________________
+*/
+
+
+.fcourier{
+    font-family: "Courier New", Courier, monospace;
+}
+.fcursive{
+    font-family: 'Stalemate', cursive;
+    font-size: 35px;
+}
+/*<link href="https://fonts.googleapis.com/css?family=Stalemate&display=swap" 
+rel="stylesheet">*/
+.forbitron{
+    font-family: 'Orbitron', sans-serif;
+}
+/*<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" 
+rel="stylesheet">*/
+.fpipboy{
+    font-family: 'Roboto Mono', monospace;
+}
+/*<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" 
+rel="stylesheet">*/
+.ftrebuchet{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.ftitillium{
+    font-family: 'Titillium Web', sans-serif;
+}
+/*<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" 
+rel="stylesheet">*/
+.fubuntu{
+    font-family: 'Ubuntu', sans-serif;
+}
+/*<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" 
+rel="stylesheet">*/
+
+
+/*
+__________________
+|    Height       \____________________________
+*/
+
+
+.h10{
+    height:10%;
+}
+.h25{
+    height:25%;
+}
+.h50{
+    height:50%;
+}
+.h75{
+    height:75%;
+}
+.h100{
+    height:100%;
+}
+
+
+/*
+__________________
+|    Width        \______________________________
+*/
+
+
+.w10{
+    width:10%;
+}
+.w25{
+    width:25%;
+}
+.w50{
+    width:50%;
+}
+.w75{
+    width:75%;
+}
+.w100{
+    width:100%;
+}
+

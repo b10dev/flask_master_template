@@ -1,0 +1,34 @@
+<!-- This is the master template for all of the child html files -->
+{% extends "master_template.html" %}
+
+<!-- Insert the title for the page -->
+{% block title %}
+
+{% endblock title %}
+
+<!-- Insert the body of the document here -->
+{% block body %}
+<body class="body bg-white" onload="flashing_text();">
+
+    <!-- ---------------ATTENTION--------------- -->
+    <div class="basic">
+        <h2 class="text-error error">Do not alter this file</h2>
+        <p>Another copy of this file can be found in the
+            'Html' file.</p>
+        <p>Use the 'index.html' file (which is not commented),
+            and alter that file.</p>
+        <p>Keep this file as a template for all other html files</p>
+        <p>This file is made for development and documentation only!</p>
+        <h1 id="warning-text" class="text-error error">Warning!!!</h1>
+    </div>
+
+    <!-- This is the JS that goes along with all of the
+        B10OnlineHtml.  In this JS file, you will find
+        all of the functions that go along with the HTML
+        class's and CSS styles.  It is important that this
+        JS file be linked in all of the HTML files, along
+        with the CSS file 'index.css', found in the <head>
+        tag.-->
+    <script src="../JS/index.js"></script>
+</body>
+{% endblock body %}

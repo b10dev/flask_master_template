@@ -1,0 +1,29 @@
+<!-- This is the master copy of html.
+    This will be extended to all of the
+    other html pages.  A Block has been reserved for the
+    Title and Body-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='d16favico.png') }}">
+    <!-- This block is reserved for the title -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block title %}
+
+    {% endblock title %}
+  </head>
+  <body>
+
+    <!-- This block is reserved for the body -->
+    {% block body %}
+
+    {% endblock body %}
+
+    <!-- Optional JavaScript -->
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+  </body>
+</html>
