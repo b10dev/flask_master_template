@@ -1,0 +1,118 @@
+<!-- This is the master template for all of the child html files -->
+{% extends "master_template.html" %}
+
+<!-- Insert any additional metadata for the page -->
+{% block head %}
+
+{% endblock head %}
+
+<!-- Insert the title for the page -->
+{% block title %}
+
+{% endblock title %}
+
+<!-- Insert the body of the document here -->
+{% block body %}
+<div class="basic">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <!-- This just adds the CRST token -->
+        <h3>Forms Example</h3> <br>
+            <div>
+                {{ form.string.label() }}
+                {% if form.string.errors %}
+                    {{ form.string(class='error-message')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.string.errors %}
+                            <span style="font-size:10px; color:red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.string ( style="max-width:50%;", placeholder='String') }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.password.label() }}
+                {% if form.password.errors %}
+                    {{ form.password(class='error-message')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                            <span style="font-size:10px; color:red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.password ( style="max-width:50%;", placeholder='Password') }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.floats.label() }}
+                {% if form.floats.errors %}
+                    {{ form.floats(class='error-message')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.floats.errors %}
+                            <span style="font-size:10px; color:red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.floats ( style="max-width:50%;", placeholder='Floats') }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.booleans.label() }}
+                {% if form.booleans.errors %}
+                    {{ form.booleans(class='error-message')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.booleans.errors %}
+                            <span style="font-size:10px; color:red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.booleans ( style="max-width:50%;", placeholder='Booleans') }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.selects.label() }}
+                {% if form.selects.errors %}
+                    {{ form.selects(class='error-message')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.selects.errors %}
+                            <span style="font-size:10px; color:red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.selects ( style="max-width:50%;", placeholder='Selects') }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.files.label() }}
+                {% if form.files.errors %}
+                    {{ form.files(class='error-message')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.files.errors %}
+                            <span style="font-size:10px; color:red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.files ( style="max-width:50%;", placeholder='Files') }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.dates.label() }}
+                {% if form.dates.errors %}
+                    {{ form.dates(class='error-message')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.dates.errors %}
+                            <span style="font-size:10px; color:red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.dates ( style="max-width:50%;", placeholder='Dates') }}
+                {% endif %}
+            </div>
+        <br>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</div>
+{% endblock body %}

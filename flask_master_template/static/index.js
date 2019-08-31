@@ -17,10 +17,13 @@ _______________
 
 
 function homeLink(){
-    window.location = 'file:///home/b10/Desktop/project_files/B10OnlineHtml/Html/index.html';
+    window.location = "http://127.0.0.1:5000/home";
 }
-function aboutmeLink(){
-    window.location = 'file:///home/b10/Desktop/project_files/B10OnlineHtml/Html/index.html';
+function indexLink(){
+    window.location = 'http://127.0.0.1:5000/';
+}
+function loginLink(){
+    window.location = 'http://127.0.0.1:5000/login';
 }
 function openHomeMenu(){
     var x = document.getElementById("toolbar-dropdown");

@@ -1,0 +1,51 @@
+<!-- This is the master template for all of the child html files -->
+{% extends "master_template.html" %}
+
+
+
+
+<!-- Insert the title for the page -->
+{% block title %}
+
+{% endblock title %}
+
+<!-- Insert the body of the document here -->
+{% block body %}
+<div class="basic">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <!-- This just adds the CRST token -->
+        <h3>Login Example</h3> <br>
+            <div>
+                {{ form.username.label() }}
+                {% if form.username.errors %}
+                    {{ form.username(class='error-message')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                            <span style="font-size:10px; color:red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.username ( style="max-width:50%;", placeholder='Username') }}
+                {% endif %}
+            </div>
+            <div>
+                {{ form.password.label() }}
+                {% if form.password.errors %}
+                    {{ form.password(class='error-message')}}
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                            <span style="font-size:10px; color:red;">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.password ( style="max-width:50%;", placeholder='Password') }}
+                {% endif %}
+            </div>
+        <br>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</div>
+{% endblock body %}

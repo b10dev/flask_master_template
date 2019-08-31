@@ -8,16 +8,55 @@
   <head>
     <meta charset="utf-8">
     <!-- Custom CSS -->
-    <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='d16favico.png') }}">
     <!-- This block is reserved for the title -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block head %}
+
+    {% endblock head %}
     {% block title %}
 
     {% endblock title %}
   </head>
-  <body>
-
+  <body class="">
+      <div class="toolbar bg-white ">
+            <img id="toolbar-logo" class="toolbar-logo"
+                src="{{ url_for('static', filename='d32icon.png') }}" onclick="homeLink()" alt="Icon">
+            <h1 class="toolbar-heading">Paycheck Tracker</h1>
+            <img class="toolbar-menu-icon" src="{{ url_for('static', filename='dmenu.png') }}"
+                onclick="openHomeMenu()" onmouseenter="openHomeMenu()">
+        </div>
+        <div id="toolbar-dropdown" class="toolbar-dropdown bg-tiffanyblue rounded"
+             onmouseleave="openHomeMenu()">
+            <ul>
+                <li style="list-style-type: none;">
+                    <img class="toolbar-dropdown-icon"
+                     src="{{ url_for('static', filename='d16favico.png') }}" onclick="indexLink(), openHomeMenu()" alt="Icon">
+                    <a href="{{ url_for('index.indexpage') }}" style="color: black; text-decoration: none;">Index</a>
+                </li>
+                <li style="list-style-type: none;">
+                    <img class="toolbar-dropdown-icon"
+                     src="{{ url_for('static', filename='d16favico.png') }}" onclick="homeLink(), openHomeMenu()" alt="Icon">
+                    <a href="{{ url_for('home.homepage') }}" style="color: black; text-decoration: none;">Home</a>
+                </li>
+                <li style="list-style-type: none;">
+                    <img class="toolbar-dropdown-icon"
+                     src="{{ url_for('static', filename='d16favico.png') }}" onclick="loginLink(), openHomeMenu()" alt="Icon">
+                    <a href="{{ url_for('login.loginpage') }}" style="color: black; text-decoration: none;">Login</a>
+                </li>
+            </ul>
+        </div>
+    <!-- This block is reserved for flash messages to the user -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="feedcenter {{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
     <!-- This block is reserved for the body -->
     {% block body %}
 
